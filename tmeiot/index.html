@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projecto 1 - IoT Filipe Mangue</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+  </head>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+ 
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDgLgB6X7LrjmZBVqLXAaqPnuVvPvUbv7g",
+      authDomain: "tme-iot-filipe.firebaseapp.com",
+      projectId: "tme-iot-filipe",
+      storageBucket: "tme-iot-filipe.appspot.com",
+      messagingSenderId: "911914546592",
+      appId: "1:911914546592:web:c6f40436cb67dae8dee0c5"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    function ledOn() {
+      firebase.database().ref("SALA").set({
+        estado: "LIGADA"
+      });
+    }
+
+    function ledOff() {
+      firebase.database().ref("SALA").set({
+        estado: "DESLIGADA"
+      });
+    }
+  </script>
+  <script src="app.js" defer></script>
+  
+  <body>
+    <header id="header-ph">
+        <p style="border-bottom: groove; background-color: rgb(128, 226, 143); padding-top: 20px; padding-bottom: 7px;"><img src="img/tmeeducation-logo.png" alt="Logotipo TMEducation"></p>
+        <div class="header-in">
+          <h1>TME Education</h1>
+          <h2 style="color: rgb(10, 211, 40);">Universidade Eduardo Mondlane</h2>
+          <h2>Workshop de IoT com Arduino </h2>
+          <h1 style="color: rgb(133,149,61)">Controle Remoto de Iluminação</h1>
+        </div>
+    </header>
+    
+    <fieldset>
+      <legend>Sala</legend>
+      <div>
+        <button class="led-on" onclick="ledOn()">Ligar</button>
+        <button class="led-off" onclick="ledOff()">Desligar</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Area de Serviço</legend>
+      <div>
+        <button class="led-on" onclick="ledOn()">Ligar</button>
+        <button class="led-off" onclick="ledOff()">Desligar</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Area de Controlo de Acesso</legend>
+      <div>
+        <button class="led-on" onclick="ledOn()">Ligar</button>
+        <button class="led-off" onclick="ledOff()">Desligar</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Murro de Vedação</legend>
+      <div>
+        <button class="led-on" onclick="ledOn()">Ligar</button>
+        <button class="led-off" onclick="ledOff()">Desligar</button>
+      </div>
+    </fieldset>
+    <br />
+    <footer>
+      <p><strong> TME Education Mozambique &copy; 2023 IoT Workshop. Filipe Mangue</strong><br><br><br><em>em parceria com a SOFTCODE</em><br><br><br><img src="https://www.softcode.co.mz/images/logo.png" alt="Softcode Logo"></p>
+    </footer>
+  </body>
+</html>

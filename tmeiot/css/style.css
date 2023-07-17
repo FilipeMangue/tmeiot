@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+#header-ph {
+    text-align: center;
+}
+
+.header-in {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+fieldset {
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(128, 226, 143);
+    border-color: rgb(128, 226, 143);
+}
+
+button {
+    padding: 15px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: #ffffff;
+}
+
+button:hover {
+    background-color: rgb(10, 211, 40);
+    color: #ffffff;
+    cursor: pointer;
+    border-color: rgb(128, 226, 143);;
+}
+
+footer {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
